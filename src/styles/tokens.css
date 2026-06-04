@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #f5f5f7;
+  
+  --color-surface-0: #000000;
+  --color-surface-1: #111111;
+  --color-surface-2: #1d1d1f;
+  --color-surface-3: #2d2d2f;
+  --color-surface-4: #333336;
+  
+  --color-brand-500: #2997ff;
+  --color-accent-cyan: #00e5ff;
+  --color-accent-violet: #8a2be2;
+  --color-accent-pink: #ff2a6d;
+  --color-accent-amber: #ff9500;
+  
+  --color-ink-100: #f5f5f7;
+  --color-ink-200: #e8e8ed;
+  --color-ink-300: #86868b;
+  --color-ink-400: #6e6e73;
+  --color-ink-500: #424245;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #f5f5f7;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.bento-card {
+  background-color: var(--color-surface-1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+.bento-card:hover {
+  background-color: #161616;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  transform: scale(1.01) translateY(-2px);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-ink-100);
+  color: #000;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-surface-2);
+  color: var(--color-ink-100);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-surface-3);
+}
+
+.gradient-text-subtle {
+  background-image: linear-gradient(110deg, var(--color-ink-100), var(--color-ink-300));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
