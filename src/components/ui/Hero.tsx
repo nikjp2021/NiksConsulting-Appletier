@@ -54,9 +54,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8"
+          className="mb-10"
         >
-          <span className="text-ink-400 font-semibold tracking-[0.3em] uppercase text-xs">
+          <span className="text-ink-400 font-semibold tracking-[0.3em] uppercase text-sm md:text-base">
             Niks Consulting Pro
           </span>
         </motion.div>
@@ -65,7 +65,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="heading-display mb-6"
+          className="heading-display text-7xl md:text-8xl lg:text-[8rem] leading-[1.1] mb-8"
         >
           Intelligence, <br />
           <span className="gradient-text-subtle">Engineered.</span>
@@ -75,7 +75,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
-          className="text-xl md:text-2xl text-ink-300 max-w-2xl mx-auto font-normal leading-relaxed mb-12 tracking-tight"
+          className="text-2xl md:text-3xl lg:text-4xl text-ink-300 max-w-4xl mx-auto font-normal leading-relaxed mb-14 tracking-tight"
         >
           We architect pure, uncompromising AI workflows for enterprises. <br className="hidden md:block" />
           No bloat. Just scalable, raw performance.
