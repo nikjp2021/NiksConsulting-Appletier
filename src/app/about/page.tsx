@@ -45,22 +45,38 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ delay: 0.3, type: "spring", stiffness: 100, damping: 20 }}
-          className="bento-card p-8 md:p-14 space-y-12"
+          className="bento-card overflow-hidden"
         >
-          <div>
-            <h2 className="font-display font-bold text-3xl text-ink-100 mb-6 tracking-tight">Our Mission</h2>
-            <p className="text-ink-300 leading-relaxed text-lg font-light">
-              At Nik's Consulting, we believe that AI should not be an inaccessible buzzword. Our mission is to demystify artificial intelligence and digital transformation, bringing production-ready, agentic workflows to startups and SMEs who want to compete at a global scale. We turn complex architectures into simple, scalable, and highly profitable systems.
-            </p>
+          {/* Massive Cinematic Video Hero inside the card */}
+          <div className="relative w-full h-[400px] md:h-[500px]">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/media/Generate_Video_First_person.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-surface-1 to-transparent"></div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+          <div className="p-8 md:p-14 space-y-12 relative z-10 mt-[-80px]">
+            <div>
+              <h2 className="font-display font-bold text-3xl text-ink-100 mb-6 tracking-tight">Our Mission</h2>
+              <p className="text-ink-300 leading-relaxed text-lg font-light">
+                At Nik's Consulting, we believe that AI should not be an inaccessible buzzword. Our mission is to demystify artificial intelligence and digital transformation, bringing production-ready, agentic workflows to startups and SMEs who want to compete at a global scale. We turn complex architectures into simple, scalable, and highly profitable systems.
+              </p>
+            </div>
 
-          <div>
-            <h2 className="font-display font-bold text-3xl text-ink-100 mb-6 tracking-tight">The Team</h2>
-            <p className="text-ink-300 leading-relaxed text-lg font-light">
-              We are a collective of senior engineers, award-winning UI/UX designers, and business strategists. We don't just hand you a slide deck and walk away. We build the infrastructure, deploy the agents, and optimize the funnels that drive real, measurable ROI. Your growth is exactly what fuels our passion.
-            </p>
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+            <div>
+              <h2 className="font-display font-bold text-3xl text-ink-100 mb-6 tracking-tight">The Team</h2>
+              <p className="text-ink-300 leading-relaxed text-lg font-light">
+                We are a collective of senior engineers, award-winning UI/UX designers, and business strategists. We don't just hand you a slide deck and walk away. We build the infrastructure, deploy the agents, and optimize the funnels that drive real, measurable ROI. Your growth is exactly what fuels our passion.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

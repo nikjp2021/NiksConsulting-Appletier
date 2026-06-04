@@ -52,14 +52,20 @@ export default function ContactPage() {
             transition={{ delay: 0.3, type: "spring", stiffness: 100, damping: 20 }}
             className="lg:col-span-2 space-y-6"
           >
-            <div className="bento-card p-8 flex items-start gap-4 h-full">
-              <div className="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center shrink-0">
-                <Mail className="text-brand-500" size={24} />
+            <div className="bento-card overflow-hidden h-full flex flex-col">
+              <div className="relative w-full h-48 md:h-64">
+                <img src="/media/Copilot_20260525_015955.png" alt="Contact Us" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface-1 to-transparent"></div>
               </div>
-              <div>
-                <h3 className="font-display font-bold text-xl text-ink-100 mb-2">Email Us</h3>
-                <p className="text-ink-400 font-light mb-4">We usually respond within 24 hours.</p>
-                <a href="mailto:hello@niksconsulting.com" className="text-brand-500 font-medium hover:underline">hello@niksconsulting.com</a>
+              <div className="p-8 flex items-start gap-4 flex-1 relative z-10 mt-[-60px]">
+                <div className="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center shrink-0 backdrop-blur-md border border-white/10 shadow-2xl">
+                  <Mail className="text-brand-500" size={24} />
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-xl text-ink-100 mb-2">Email Us</h3>
+                  <p className="text-ink-400 font-light mb-4 text-shadow-sm">We usually respond within 24 hours.</p>
+                  <a href="mailto:hello@niksconsulting.com" className="text-brand-500 font-medium hover:underline">hello@niksconsulting.com</a>
+                </div>
               </div>
             </div>
           </motion.div>
