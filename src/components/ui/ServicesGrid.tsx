@@ -69,7 +69,7 @@ export function ServicesGrid() {
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-90"
                 />
               </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent via-transparent to-[#111111]"></div>
+              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-black/40 via-transparent to-black/80"></div>
             </div>
           </motion.div>
 
@@ -95,7 +95,7 @@ export function ServicesGrid() {
                   className="object-cover object-bottom group-hover:scale-105 transition-transform duration-1000 ease-out opacity-80"
                 />
               </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[#111111]"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
           </motion.div>
 
@@ -121,7 +121,7 @@ export function ServicesGrid() {
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-80"
                 />
               </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[#111111]"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
           </motion.div>
 
