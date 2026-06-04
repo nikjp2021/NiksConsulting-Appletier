@@ -75,7 +75,20 @@ When building a site with this aesthetic, agents MUST use the `generate_image` t
 - **Abstract Hero:** `"Ultra-high-end Apple style 3D abstract fluid art. Dark mode, deep blacks, subtle glowing edges of titanium and deep ocean blue. Minimalist, premium, smooth lighting, 8k resolution, suitable for a dark tech website hero background."`
 - **Bento Assets:** `"High-end 3D render of an AI neural processor. Dark mode, glassmorphism style, pure black background, subtle blue neon traces. Apple hardware aesthetic, extremely detailed, photorealistic, 4k."`
 
-## 6. Master Agent Prompt
+## 6. Performance & Asset Compression (Netlify Optimization)
+Because this aesthetic relies heavily on high-end 3D renders and fluid backgrounds, asset weight can easily balloon to several megabytes, causing serverless environments (like Netlify) to choke during cold-start Image Optimization, resulting in poor LCP times.
+
+### The Compression Protocol:
+1. **Aggressive WebP Encoding:** All generated `.png` assets MUST be converted to lightweight `.webp` formats locally using `ffmpeg` before pushing to production. This generally saves ~80% in file size with no perceptual quality loss.
+   ```bash
+   for img in public/images/*.png; do ffmpeg -i "$img" -c:v libwebp -quality 80 "${img%.png}.webp" -y && rm "$img"; done
+   ```
+2. **Next.js Optimizer Tuning:** Ensure `next.config.ts` explicitly serves modern formats:
+   ```ts
+   images: { formats: ['image/avif', 'image/webp'], minimumCacheTTL: 60 }
+   ```
+
+## 7. Master Agent Prompt
 *Copy and paste this to an agent to instantly execute this framework:*
 
 > "Act as a Lead UI/UX Engineer from Apple. I want you to build a Next.js website. You must follow the 'Apple-Tier Design Recipe'. 

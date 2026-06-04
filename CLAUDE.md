@@ -114,11 +114,27 @@ import { motion } from "framer-motion";
 
 ---
 
-## 🚀 PHASE 4: AUTOMATED EXECUTION & DELIVERY
-1. **Initialize `task.md`**: Create a checklist covering Tokens, Asset Generation, Hero Component, Bento Grid, and Final Polish.
-2. **Execute Steps 1-3**: Overwrite existing files with the Apple-tier design system.
-3. **Verify Design**: Ensure no bright backgrounds exist. Ensure padding inside Bento cards is massive (`p-10 md:p-16`).
+## ⚡ PHASE 4: PERFORMANCE & ASSET OPTIMIZATION
+**CRITICAL:** High-end 3D graphics and fluid videos are heavy. Do not deploy raw `.png` or `.mp4` assets to production, as it will break Netlify serverless image optimization and cause slow LCP cold starts.
+
+1. **Aggressive WebP Compression:**
+   Agents MUST run `ffmpeg` locally to compress all heavy assets into lightweight `.webp` formats before committing.
+   ```bash
+   for img in public/images/*.png; do ffmpeg -i "$img" -c:v libwebp -quality 80 "${img%.png}.webp" -y && rm "$img"; done
+   ```
+2. **Next.js Image Optimizer Configuration:**
+   Ensure `next.config.ts` explicitly allows modern formats to prevent serverless bottlenecking:
+   ```ts
+   images: { formats: ['image/avif', 'image/webp'], minimumCacheTTL: 60 }
+   ```
+
+---
+
+## 🚀 PHASE 5: AUTOMATED EXECUTION & DELIVERY
+1. **Initialize `task.md`**: Create a checklist covering Tokens, Asset Generation, Component Architecture, Performance Tuning, and Final Polish.
+2. **Execute Steps 1-4**: Overwrite existing files with the Apple-tier design system and run WebP compressions.
+3. **Verify Design**: Ensure no bright backgrounds exist. Ensure padding inside Bento cards is massive (`p-10 md:p-16`). Ensure all assets point to `.webp`.
 4. **Write Walkthrough**: Deliver a `walkthrough.md` summarizing the cinematic transformation and presenting the generated 3D assets to the user.
-5. **Commit**: Run `git add . && git commit -m "feat: Apple-tier redesign and AI asset generation"`
+5. **Commit**: Run `git add . && git commit -m "feat: Apple-tier redesign and WebP asset optimization"`
 
 **END OF INSTRUCTIONS. COMMENCE WORKFLOW NOW.**
