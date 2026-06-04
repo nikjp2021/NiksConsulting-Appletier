@@ -63,7 +63,7 @@ export function ServicesGrid() {
             <div className="relative h-64 md:h-[500px] w-full md:w-1/2 flex-shrink-0 overflow-hidden">
               <motion.div style={{ y: imageY1 }} className="absolute inset-[-50px]">
                 <Image 
-                  src="/images/bento_engine.png" 
+                  src="/images/bento_engine.webp" 
                   alt="AI Neural Engine" 
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-90"
@@ -89,7 +89,7 @@ export function ServicesGrid() {
             <div className="relative flex-1 w-full mt-auto">
               <motion.div style={{ y: imageY2 }} className="absolute inset-[-50px]">
                 <Image 
-                  src="/images/bento_graph.png" 
+                  src="/images/bento_graph.webp" 
                   alt="Data Visualization" 
                   fill
                   className="object-cover object-bottom group-hover:scale-105 transition-transform duration-1000 ease-out opacity-80"
@@ -115,7 +115,7 @@ export function ServicesGrid() {
             <div className="relative flex-1 w-full mt-auto">
               <motion.div style={{ y: imageY3 }} className="absolute inset-[-50px]">
                 <Image 
-                  src="/images/bento_globe.png" 
+                  src="/images/bento_globe.webp" 
                   alt="Global Network Connectivity" 
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-80"

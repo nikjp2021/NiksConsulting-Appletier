@@ -35,7 +35,7 @@ export function Hero() {
         style={{ scale: imageScale, opacity: imageOpacity }}
       >
         <Image 
-          src="/images/hero_fluid.png" 
+          src="/images/hero_fluid.webp" 
           alt="Abstract Fluid Background" 
           fill
           priority
